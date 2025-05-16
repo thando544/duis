@@ -1,0 +1,31 @@
+/* Jaycee looks */
+
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: Jaycee-looks;
+    src: url(../fonts/%20looks.woff2);
+}
+
+/* Poppins */
+
+@font-face {
+    font-weight: 300;
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Light.woff');
+}
+@font-face {
+    font-weight: 400;
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.woff');
+}
+@font-face {
+    font-weight: 500;
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Medium.woff');
+}
+@font-face {
+    font-weight: 700;
+    font-family: Poppins;
+    src: url('../fonts/Poppins-SemiBold.woff');
+}

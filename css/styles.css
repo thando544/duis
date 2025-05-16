@@ -1,0 +1,363 @@
+/* sizes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: calc(1em + 0.5rem);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-weight: 400;
+  font-family: Poppins;
+}
+
+.header {
+  height: 100dvh;
+  background: url("../images/banner.jpg") center no-repeat;
+  background-size: cover;
+}
+.header__navbar {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  justify-content: space-between;
+}
+.header__navbar__logo {
+  width: 1.875rem;
+  height: 1.875rem;
+  fill: #fff;
+}
+.header__navbar__menu {
+  gap: 0.8em;
+  display: flex;
+  list-style: none;
+}
+.header__navbar__link {
+  font-weight: 500;
+  color: #fff;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.header__content {
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-direction: column;
+}
+.header__content__title {
+  font-weight: 500;
+  text-align: center;
+  text-wrap: balance;
+  font-size: 1.875rem;
+  letter-spacing: -0.05rem;
+}
+.header__content__description {
+  font-size: 2.25rem;
+  font-family: Jaycee-looks;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .header__navbar__logo {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+/* sm */
+@media (min-width: 640px) {
+  .header__navbar__logo {
+    width: 3rem;
+    height: 3rem;
+  }
+  .header__navbar__menu {
+    gap: 1em;
+  }
+  .header__content__title {
+    line-height: 1.5;
+    font-size: 1.875rem;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .header__navbar__link {
+    font-size: 1rem;
+  }
+  .header__navbar__menu {
+    gap: 1.5em;
+  }
+  .header__content__title {
+    font-size: 2.25rem;
+  }
+  .header__content__description {
+    font-size: 3rem;
+  }
+}
+/* 2xl */
+@media (min-width: 1536px) {
+  .header__navbar__menu {
+    gap: 2em;
+  }
+  .header__content__title {
+    font-size: 3rem;
+  }
+  .header__content__description {
+    font-size: 3.75rem;
+  }
+}
+.about {
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.about__container {
+  text-align: center;
+  padding-inline: 0.5em;
+}
+.about__container > * + * {
+  margin-top: 1em;
+}
+.about__title {
+  font-weight: 500;
+}
+
+/* md */
+@media (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .about__title {
+    text-wrap: balance;
+  }
+  .about__container {
+    width: 33.3333%;
+    text-align: center;
+    padding-inline: 0.5em;
+  }
+  .about__container > * + * {
+    margin-top: 1em;
+  }
+}
+.services {
+  text-align: center;
+}
+.services > * + * {
+  margin-top: 1.5em;
+}
+.services__banner {
+  width: 100%;
+  height: auto;
+}
+.services__img {
+  object-fit: contain;
+}
+.services__description {
+  padding: 0.6em;
+}
+
+/* md */
+@media (min-width: 768px) {
+  .services__banner {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+.clients {
+  text-align: left;
+}
+.clients > * + * {
+  margin-top: 4em;
+}
+.clients__title {
+  text-wrap: balanced;
+  text-transform: uppercase;
+}
+.clients__container {
+  display: flex;
+  padding: 0.5em;
+  flex-direction: column;
+  background-color: #f8f8f8;
+}
+.clients__container .client {
+  padding: 2em;
+}
+.clients__container .client__description {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+.clients__container .client__title {
+  font-weight: 350;
+  margin-top: 0.8em;
+  width: max-content;
+}
+
+/* md */
+@media (min-width: 768px) {
+  .clients__container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f8f8;
+  }
+  .clients__container .client {
+    padding: 2em;
+    width: 33.3333%;
+  }
+  .clients__container .client__description {
+    font-size: 1.25rem;
+  }
+}
+.newsletter {
+  gap: 2em;
+  height: 30dvh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ECA052;
+}
+.newsletter .section__title {
+  color: #fff;
+}
+.newsletter__form {
+  gap: 0.5em;
+  padding: 0.5em;
+  display: flex;
+}
+.newsletter__form input[placeholder=name] {
+  border-radius: 20px 0 0 20px;
+}
+.newsletter__form input[placeholder=email] {
+  border-radius: 0 20px 20px 0;
+}
+.newsletter__form input[placeholder] {
+  height: 35px;
+  border: none;
+  outline: none;
+  padding: 0.6em;
+  width: 33.3333%;
+}
+.newsletter__form__btn {
+  font-size: 0.75rem;
+  border-radius: 50%;
+  width: 33.3333%;
+}
+
+@media (min-width: 640px) {
+  .newsletter__form input[placeholder] {
+    padding: 0.5em;
+  }
+  .newsletter__form__btn {
+    font-size: 1rem;
+  }
+}
+.footer {
+  gap: 2.5em;
+  padding: 3em;
+  color: #fff;
+  height: 50dvh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #393939;
+}
+.footer__navbar {
+  gap: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer__navbar__logo {
+  width: 3.75rem;
+  height: 3.75rem;
+  fill: #fff;
+}
+.footer__navbar__menu {
+  gap: 1em;
+  display: flex;
+  list-style: none;
+}
+.footer__navbar__menu__link {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+.footer__line {
+  list-style: none;
+  padding-right: 15rem;
+  border: 1px solid #fff;
+}
+.footer__copyright {
+  font-size: 0.75rem;
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .footer__navbar__logo {
+    width: 3.75rem;
+    height: 3.75rem;
+    fill: #fff;
+  }
+  .footer__navbar__menu__link {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  .footer__copyright {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 368px) {
+  .header__navbar__logo {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: #fff;
+  }
+  .header__navbar__menu {
+    gap: 0.2em;
+  }
+  .header__navbar__link {
+    font-weight: 200;
+    font-size: 0.75rem;
+  }
+  .footer__navbar__logo {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .footer__navbar__menu {
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
